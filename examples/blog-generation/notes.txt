@@ -1,0 +1,14 @@
+Topic: Smart Contract Security Best Practices
+
+Key points to cover:
+- Reentrancy attacks and how to prevent them
+- Check-Effects-Interactions pattern
+- Using OpenZeppelin libraries
+- Importance of audits
+- Testing strategies (unit tests, fuzzing, formal verification)
+
+Target audience: Solidity developers (intermediate level)
+
+Tone: Technical but accessible, practical focus
+
+Include real-world examples if possible

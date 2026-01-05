@@ -14,9 +14,13 @@ TASK
 Produce a complete moderator guide.
 
 RULES
-- Ask at most 3 clarifying questions only if panelists or goal is missing.
-- Questions must be crisp and answerable in 60 to 120 seconds.
-- Include follow ups that push past marketing.
+- If information is missing or unknown, state "Unknown" explicitly
+- State all assumptions clearly
+- Do not fabricate or hallucinate facts
+- Be deterministic: same input should produce consistent output structure
+- Ask at most 3 clarifying questions only if panelists or goal is missing
+- Questions must be crisp and answerable in 60 to 120 seconds
+- Include follow ups that push past marketing
 
 OUTPUT SCHEMA
 1) Opening (30 seconds script)

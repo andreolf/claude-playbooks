@@ -12,11 +12,15 @@ TASK
 Write a publish ready blog post and a distribution package.
 
 RULES
-- If critical context is missing, ask at most 3 clarifying questions, then proceed with best assumptions.
-- Keep language simple, direct, and specific.
-- No vague claims. Use numbers when possible.
-- Use short paragraphs.
-- Output must follow the schema below exactly.
+- If information is missing or unknown, state "Unknown" explicitly
+- State all assumptions clearly
+- Do not fabricate or hallucinate facts
+- Be deterministic: same input should produce consistent output structure
+- If critical context is missing, ask at most 3 clarifying questions, then proceed with best assumptions
+- Keep language simple, direct, and specific
+- No vague claims. Use numbers when possible
+- Use short paragraphs
+- Output must follow the schema below exactly
 
 OUTPUT SCHEMA
 1) Clarifying questions (only if needed)

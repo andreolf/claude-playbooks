@@ -1,0 +1,11 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "Example pack demonstrating pack structure and capabilities",
+  "author": "Claude Playbooks",
+  "playbooks": [
+    "hello_world"
+  ],
+  "requires_license": false,
+  "license_env": "EXAMPLES_PACK_LICENSE"
+}

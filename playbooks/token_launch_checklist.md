@@ -14,9 +14,13 @@ TASK
 Create a token launch checklist and timeline that reduces risk.
 
 RULES
-- Ask at most 3 clarifying questions only if distribution or launch type is unclear.
-- Assume there is a public launch unless stated otherwise.
-- Separate technical, legal/comms, liquidity, and security.
+- If information is missing or unknown, state "Unknown" explicitly
+- State all assumptions clearly in the Launch type assumptions section
+- Do not fabricate or hallucinate facts
+- Be deterministic: same input should produce consistent output structure
+- Ask at most 3 clarifying questions only if distribution or launch type is unclear
+- Assume there is a public launch unless stated otherwise
+- Separate technical, legal/comms, liquidity, and security
 
 OUTPUT SCHEMA
 1) Clarifying questions (only if needed)

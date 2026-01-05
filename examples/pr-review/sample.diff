@@ -1,0 +1,51 @@
+diff --git a/src/auth.js b/src/auth.js
+index abc123..def456 100644
+--- a/src/auth.js
++++ b/src/auth.js
+@@ -10,7 +10,12 @@ export async function login(email, password) {
+     throw new Error('Invalid credentials');
+   }
+
+-  const token = jwt.sign({ userId: user.id }, SECRET_KEY);
++  const token = jwt.sign(
++    {
++      userId: user.id,
++      email: user.email
++    },
++    SECRET_KEY,
++    { expiresIn: '24h' }
++  );
+   return { token, user };
+ }
+
+diff --git a/src/payments.js b/src/payments.js
+new file mode 100644
+index 0000000..789abc
+--- /dev/null
++++ b/src/payments.js
+@@ -0,0 +1,25 @@
++import stripe from 'stripe';
++
++const stripeClient = stripe(process.env.STRIPE_SECRET_KEY);
++
++export async function createPayment(amount, currency, customerId) {
++  const paymentIntent = await stripeClient.paymentIntents.create({
++    amount,
++    currency,
++    customer: customerId,
++    automatic_payment_methods: {
++      enabled: true,
++    },
++  });
++
++  return {
++    clientSecret: paymentIntent.client_secret,
++    paymentIntentId: paymentIntent.id,
++  };
++}
++
++export async function confirmPayment(paymentIntentId) {
++  const paymentIntent = await stripeClient.paymentIntents.retrieve(paymentIntentId);
++
++  return paymentIntent.status === 'succeeded';
++}

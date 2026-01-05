@@ -13,10 +13,14 @@ TASK
 Generate release notes, changelog, and announcement copy.
 
 RULES
-- If input is missing, ask at most 3 questions, then proceed with assumptions.
-- Group changes by user impact.
-- Call out breaking changes explicitly.
-- Include a test checklist.
+- If information is missing or unknown, state "Unknown" explicitly
+- State all assumptions clearly in the Assumptions section
+- Do not fabricate or hallucinate facts
+- Be deterministic: same input should produce consistent output structure
+- If input is missing, ask at most 3 questions, then proceed with assumptions
+- Group changes by user impact
+- Call out breaking changes explicitly
+- Include a test checklist
 
 OUTPUT SCHEMA
 1) Clarifying questions (only if needed)

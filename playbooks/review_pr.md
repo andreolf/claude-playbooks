@@ -14,9 +14,13 @@ TASK
 Review the changes and propose improvements.
 
 RULES
-- If input is missing, ask at most 3 questions, then proceed.
-- Focus on correctness, security, tests, and maintainability.
-- Provide actionable diffs or pseudo diffs when possible.
+- If information is missing or unknown, state "Unknown" explicitly
+- State all assumptions clearly
+- Do not fabricate or hallucinate facts
+- Be deterministic: same input should produce consistent output structure
+- If input is missing, ask at most 3 questions, then proceed
+- Focus on correctness, security, tests, and maintainability
+- Provide actionable diffs or pseudo diffs when possible
 
 OUTPUT SCHEMA
 1) Summary (3 bullets)
