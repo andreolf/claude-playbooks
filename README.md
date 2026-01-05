@@ -20,7 +20,7 @@ Transform your Claude workflows with reusable, parameterized prompt templates. W
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/claude-playbooks.git
+git clone https://github.com/andreolf/claude-playbooks.git
 cd claude-playbooks
 
 # Make it executable
